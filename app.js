@@ -39,8 +39,11 @@ app.use(express.static("public"));
 
 //Templating Engine
 app.use(expressEjsLayouts);
-app.set("layout", "./layouts/main");
+const path = require("path");
+
+app.set("views", path.join(__dirname, "views")); // Explicitly set the views path
 app.set("view engine", "ejs");
+app.set("layout", path.join(__dirname, "views/layouts/main")); // Explicit absolute path
 
 app.locals.isActiveRoute = isActiveRoute;
 
