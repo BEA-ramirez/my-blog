@@ -40,7 +40,6 @@ app.use(express.static(path.join(__dirname, "public")));
 
 //Templating Engine
 app.use(expressEjsLayouts);
-const path = require("path");
 
 app.set("views", path.join(__dirname, "views")); // Explicitly set the views path
 app.set("view engine", "ejs");
