@@ -1,15 +1,6 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "app.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "app.js"
-    }
-  ]
+  "builds": [{ "src": "server/index.js", "use": "@vercel/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "server/index.js" }],
+  "ignoreCommand": "node_modules"
 }
